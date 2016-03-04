@@ -4,7 +4,7 @@ var app = angular.module('meanMapApp', ['addCtrl', 'searchCtrl', 'headerCtrl', '
     // Configures Angular routing -- showing the relevant view and controller when needed.
     .config(function($routeProvider){
 
-        // Join Team Control Panel
+        // Add Control Panel
         $routeProvider.when('/add', {
             controller: 'addCtrl',
             templateUrl: 'partials/addForm.html',
@@ -14,6 +14,6 @@ var app = angular.module('meanMapApp', ['addCtrl', 'searchCtrl', 'headerCtrl', '
             controller: 'searchCtrl',
             templateUrl: 'partials/searchForm.html',
 
-        // All else forward to the Join Team Control Panel
+        // test button
         }).otherwise({redirectTo:'/add'})
     });
