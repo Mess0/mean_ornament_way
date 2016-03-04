@@ -35,7 +35,7 @@ var MapSchema = new Schema({
 
 
 // Indexes this schema in geoJSON format (critical for running proximity searches)
-//MapSchema.index({location: '2dsphere'});
+MapSchema.index({location: '2dsphere'});
 
 // Exports the MapSchema for use elsewhere. Sets the MongoDB collection
 module.exports = mongoose.model('ornament_way_map', MapSchema);
