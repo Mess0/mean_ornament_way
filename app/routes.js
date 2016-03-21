@@ -1,6 +1,6 @@
 // Dependencies
 var mongoose        = require('mongoose');
-var Map           = require('./model.js');
+var Map             = require('./model.js');
 
 
 // Opens App Routes
@@ -18,9 +18,8 @@ module.exports = function(app) {
                 res.send(err);
             } else {
                 // If no errors are found, it responds with a JSON of all users
-                console.log(maps);
                 res.json(maps);
-                console.log(maps)
+
             }
         });
     });
@@ -29,17 +28,23 @@ module.exports = function(app) {
     // --------------------------------------------------------
     // Provides method for saving new users in the db
     app.post('/maps', function(req, res){
+        console.log(req);
 
-        // Creates a new Map based on the Mongoose schema and the post bo.dy
+        // Creates a new Map based on the Mongoose schema and the post body
         var newMap = new Map(req.body);
 
         // New Map is saved in the db.
         newMap.save(function(err){
-            if(err)
+            if(err) {
+                //console.log(err);
                 res.send(err);
-            else
+            }
+            else {
                 // If no errors are found, it responds with a JSON of the new user
+
                 res.json(req.body);
+
+            }
         });
     });
 

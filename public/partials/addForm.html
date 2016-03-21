@@ -18,20 +18,23 @@
                 <!-- Text Boxes and Other Map Inputs.Ng-model binds the values to Angular $scope -->
                 <div class="form-group">
                     <label for="username">Назва <span class="badge">Всі поля обов'язкові до заповнення</span></label>
-                    <input type="text" class="form-control" id="username" placeholder="Музей сковороди" ng-model="formData.username" required>
+                    <input type="text" class="form-control" id="username" placeholder="Музей сковороди" ng-model="formData.Name" required>
                 </div>
-                <label class="radio control-label">Инфраструктура</label>
+                <label class="radio control-label" ng-model="formData.Type">Инфраструктура</label>
                 <select class="form-control">
-                    <option>1</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
                 </select>
 
                 <div class="form-group">
                     <label for="1">Місто</label>
-                    <input type="text" class="form-control" id="1" placeholder="Київ" ng-model="formData.age" required>
+                    <input type="text" class="form-control" id="1" placeholder="Київ" ng-model="formData.City" required>
                 </div>
                 <div class="form-group">
                     <label for="2">Вулиця</label>
-                    <input type="text" class="form-control" id="2" placeholder="вул. Приозерна, 3" ng-model="formData.favlang" required>
+                    <input type="text" class="form-control" id="2" placeholder="вул. Приозерна, 3" ng-model="formData.Address" required>
                 </div>
                 <div class="form-group">
                     <label for="3">Широта</label>

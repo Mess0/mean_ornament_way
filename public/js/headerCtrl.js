@@ -1,4 +1,4 @@
-// Create the headerCtrl module and controller.Вepends on $location service
+// Create the headerCtrl module and controller.Depends on $location service
 var headerCtrl = angular.module('headerCtrl', []);
 headerCtrl.controller('headerCtrl', function($scope, $location) {
 

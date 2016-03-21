@@ -6,10 +6,10 @@ var Schema      = mongoose.Schema;
 var MapSchema = new Schema({
 
     Name: {type: String, required: true},
-    Type: {type: String, required: true},
+    //Type: {type: String, required: true},
     City: {type: String, required: true},
     Address: {type: String, required: true},
-    Region: {type: String, required: true},
+    //Region: {type: String, required: true},
     GPSlatitude: {type: String, required: true},
     GPSlongitude: {type: String, required: true}
 
