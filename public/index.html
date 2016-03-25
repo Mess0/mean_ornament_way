@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css"/>
 
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCpDF08HEddWRC0PC_ieNTPHfpHDgvCA0"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCpDF08HEddWRC0PC_ieNTPHfpHDgvCA0&libraries=places"></script>
 
     <!-- Modernizr -->
     <script src="../bower_components/modernizr/bin/modernizr"></script>
@@ -27,7 +27,6 @@
     <script src="js/app.js"></script>
     <script src="js/gservice.js"></script>
     <script src="js/addCtrl.js"></script>
-    <script src="js/searchCtrl.js"></script>
     <script src="js/headerCtrl.js"></script>
 </head>
 
@@ -43,12 +42,12 @@
         <!-- Header items are made active upon selection -->
         <ul class="nav nav-pills pull-right">
              <li ng-class="{ active: isActive('/join')}"><a href="/#/join">Додати маршрут</a></li>
-            <li ng-class="{ active: isActive('/find')}"><a href="/#/find">Знайти точку</a></li>
-            <li ng-class="{ active: isActive('/list')}"><a href="/#/list">Список маршрутів</a></li>
+            <!--"ToDo-->
+            <li ng-class="{ active: isActive('/moderate')}"><a href="/#/find">Модерувати маршрут</a></li>
         </ul>
 
         <!-- Header Title -->
-        <h3 class="text-muted">HEADER will be here</h3>
+        <h3 class="text-muted">HEADER</h3>
     </div>
 
     <!-- Map and Side Panel -->
@@ -67,7 +66,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p class="text-center">FOOTER will be here
+        <p class="text-center">FOOTER
             </p>
     </div>
 
