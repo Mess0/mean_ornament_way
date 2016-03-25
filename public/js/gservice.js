@@ -27,7 +27,7 @@ angular.module('gservice', [])
         // --------------------------------------------------------------
         // Refresh the Map with new data. Takes three parameters (lat, long, and filtering results)
 
-        // new function!!
+        // redirect object data to add form
         var redirectOnForm = function (location) {
             googleMapService.clickedLocation = location;
             $rootScope.$broadcast("redirectOnForm");
@@ -137,14 +137,12 @@ angular.module('gservice', [])
                 });
             }
 
-            // If a filter was used set the icons yellow, otherwise blue
-
             // Loop through each location in the array and place a marker
             locations.forEach(function (n, i) {
                 var marker = new google.maps.Marker({
                     position: n.latlon,
                     map: map,
-                    title: "Big Map",
+                    title: "",
                     icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
 
                 });
@@ -163,7 +161,6 @@ angular.module('gservice', [])
             var initialLocation = new google.maps.LatLng(latitude, longitude);
             var marker = new google.maps.Marker({
                 position: initialLocation,
-                animation: google.maps.Animation.BOUNCE,
                 map: map,
                 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
             });

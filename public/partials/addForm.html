@@ -13,12 +13,13 @@
         <div class="panel-body">
 
             <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
-            <form name ="addForm" novalidate>
+            <form name="addForm" novalidate>
 
                 <!-- Text Boxes and Other Map Inputs.Ng-model binds the values to Angular $scope -->
                 <div class="form-group">
                     <label for="username">Назва <span class="badge">Всі поля обов'язкові до заповнення</span></label>
-                    <input type="text" class="form-control" id="username" placeholder="Музей сковороди" ng-model="formData.Name" required>
+                    <input type="text" class="form-control" id="username" placeholder="Музей сковороди"
+                           ng-model="formData.Name" required>
                 </div>
                 <label class="radio control-label" ng-model="formData.Type">Инфраструктура</label>
                 <select class="form-control">
@@ -34,7 +35,8 @@
                 </div>
                 <div class="form-group">
                     <label for="2">Вулиця</label>
-                    <input type="text" class="form-control" id="2" placeholder="вул. Приозерна, 3" ng-model="formData.Address" required>
+                    <input type="text" class="form-control" id="2" placeholder="вул. Приозерна, 3"
+                           ng-model="formData.Address" required>
                 </div>
                 <div class="form-group">
                     <label for="3">Широта</label>
@@ -46,12 +48,17 @@
                 </div>
                 <div class="form-group">
                     <!-- Note RefreshLoc button tied to addCtrl. This requests a refresh of the HTML5 verified location. -->
-                    <label for="verified">Моя координата <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
-                    <input type="text" class="form-control" id="verified" placeholder= "Дякуємо за ваші координати" ng-model="formData.htmlverified" readonly>
+                    <label for="verified">Моя координата <span><button ng-click="refreshLoc()"
+                                                                       class="btn btn-default btn-xs"><span
+                            class="glyphicon glyphicon-refresh"></span></button></span></label>
+                    <input type="text" class="form-control" id="verified" placeholder="Дякуємо за ваші координати"
+                           ng-model="formData.htmlverified" readonly>
                 </div>
 
-                <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
-                <button type="submit" class="btn btn-danger btn-block" ng-click="createMap()" ng-disabled="addForm.$invalid">Відправити</button>
+                <!-- Submit button. Note that its tied to createMap() function from addCtrl. -->
+                <button type="submit" class="btn btn-danger btn-block" ng-click="createMap()"
+                        ng-disabled="addForm.$invalid">Відправити
+                </button>
             </form>
         </div>
     </div>
